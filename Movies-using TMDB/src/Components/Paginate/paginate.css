@@ -1,0 +1,29 @@
+
+.paginationContainer{
+    height: 53px;
+    margin-top: -9px;
+    margin: auto;
+    padding-top: 1px;
+    background: linear-gradient(to left top, #48494b, #404042, #383c40, #2b2e31, #1f2123);
+    width:  100%;
+  }
+  ul.ulPegination{
+    min-width: 696px;
+    list-style: none;
+    padding-top: 16px;
+    text-align: center;
+  }
+  ul.ulPegination li {
+    display: inline;
+    color:#ffffff;
+  }
+  ul.ulPegination li a{
+    display: inline;
+    cursor: pointer;
+    text-decoration: none;
+    color:#ffffff;
+    padding: 10px 30px;
+  }
+  ul.ulPegination li a:hover{
+    border: 1px solid #ffffff;
+  }

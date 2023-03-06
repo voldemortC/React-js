@@ -1,0 +1,19 @@
+Trending URl:::::::
+
+https://api.themoviedb.org/3/trending/all/day?api_key=8b445d0567755b890836df8987cafeb7&page=1
+
+Series URL:::::::
+
+https://api.themoviedb.org/3/discover/tv?api_key=8b445d0567755b890836df8987cafeb7&page=1
+
+Movies URL:::::::
+
+https://api.themoviedb.org/3/discover/movie?api_key=8b445d0567755b890836df8987cafeb7&page=1
+
+Search URL ::::::
+
+https://api.themoviedb.org/3/search/multi?api_key=8b445d0567755b890836df8987cafeb7&query=1
+
+Cdn ::::::
+
+https://image.tmdb.org/t/p/original
