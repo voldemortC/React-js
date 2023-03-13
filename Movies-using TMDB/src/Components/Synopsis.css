@@ -1,0 +1,28 @@
+.wrap .backgroudImage {
+    filter: blur(4px);
+}
+.wrap {
+    position: relative;
+}
+.textContainer{
+    backdrop-filter: blur(10px);
+}
+
+.wrappner {
+    position: absolute;
+    /* margin-top: 40px; */
+    top: 40px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+    display: block;
+}
+
+.synopsisOverview{
+    overflow: hidden;
+	text-overflow: ellipsis ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:6;
+    -webkit-box-orient: vertical;
+}

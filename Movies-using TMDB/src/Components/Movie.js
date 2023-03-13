@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom';
 import Reactpaginate from './Paginate/Reactpaginate';
 import REQUEST from './AxiosPost'
 import './Paginate/paginate.css';
@@ -17,7 +18,6 @@ export default function Movie(){
         REQUEST.POST(`https://api.themoviedb.org/3/discover/movie?api_key=8b445d0567755b890836df8987cafeb7&page=${Count}`).then((res)=>{
             setMovies(res.data.results);
             SetPagenum(500);
-            console.log(Count, "<=-------------")
         })
     },[Count])
 
@@ -30,8 +30,12 @@ export default function Movie(){
                     (Movies.length > 0) ? Movies.map((item, index)=>{
                         return(
                             <div key = {`movie-${item.id}`} className="col-lg-2 col-md-3 col-sm-4">
-                                <img className= "img-thumbnail mt-5" src = {cdn.concat(item.poster_path)} alt= "image" />
-                                <span className = "text-light h5 mt-2">{item.title ? item.title : "No Title Available"}</span>
+                                <Link to = {'/Synopsis'} state={{ movieInfo: item }} className = "text-decoration-none">
+                                    <div>
+                                        <img className= "img-thumbnail mt-5" src = {cdn.concat(item.poster_path)} alt= "image" />
+                                        <span className = "text-light h5 mt-2">{item.title ? item.title : "No Title Available"}</span>
+                                    </div>
+                                </Link>
                             </div>
                         )
                     }) : null

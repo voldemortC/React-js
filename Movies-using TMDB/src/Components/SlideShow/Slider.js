@@ -1,5 +1,6 @@
 import REQUESTS from '../AxiosPost';
 import {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom';
 import { Autoplay, Navigation, Thumbs } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/swiper-bundle.min.css";
@@ -44,7 +45,9 @@ export default function Home(){
                                     <h1 className = "display-4 movieTitle">{item.original_title ? item.original_title : item.name}</h1>
                                     <p className = "text-light mt-3 movieOverview">{item.overview}</p>
                                     <p className = "text-light mt-3">Release Date: {item.release_date}</p>
-                                    <button className='btn btn-color-grandient'>Watch</button>
+                                    <Link to = {'./Synopsis'} state={{ movieInfo: item }} className = "text-decoration-none">
+                                        <button className='btn btn-color-grandient'>Watch</button>
+                                    </Link>
                                 </div>
                 			</SwiperSlide>
                 		);

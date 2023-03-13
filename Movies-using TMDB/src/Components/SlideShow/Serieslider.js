@@ -1,5 +1,6 @@
 import REQUESTS from '../AxiosPost';
 import {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 import { Autoplay, Navigation, Thumbs } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/swiper-bundle.min.css";
@@ -57,6 +58,7 @@ export default function Serieslides(){
                 		return(
                 			<SwiperSlide key = {item.id}>
                                 <div className='col-lg-12 col-md-6 col-sm-4 m-4' id = "Trending-slider">
+                                <Link to = "../Series" className = "text-decoration-none">
                                     <div className='row'>
                                         <div className='col-md-2 trend-title'>
                                             <span className = " text-light h5">{item.name ? item.name : "No Title Available"}</span>
@@ -65,6 +67,7 @@ export default function Serieslides(){
                                             <img className= "img-fluid w-75" src = {cdn.concat(item.poster_path)} />
                                         </div>
                                     </div>
+                                </Link>
                                 </div>
                 			</SwiperSlide>
                 		);

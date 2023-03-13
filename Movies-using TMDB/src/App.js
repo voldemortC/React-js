@@ -5,6 +5,7 @@ import Movie from './Components/Movie.js';
 import Trending from './Components/Trending.js';
 import Series from './Components/Series.js';
 import Search from './Components/Search.js';
+import Synopsis from './Components/Synopsis.js';
 import logo from './Components/images/movflix.png';
 export default function App(){
   return(
@@ -44,6 +45,7 @@ export default function App(){
             <Route path = "/Trending" element = {<Trending/>} />
             <Route path = "/Series" element = {<Series/>} />
             <Route path = "/Search" element = {<Search/>} />
+            <Route path = "/Synopsis" element = {<Synopsis/>} />
           </Routes>
         </div>
         {/* <div className='footerContainer'>

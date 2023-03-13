@@ -47,6 +47,7 @@
     height: 292px;
     width: auto;
 }
+
 @media screen and (min-width:240px) and (max-width:940px){
     #Trending-slider {
         width: 243px;
@@ -57,18 +58,6 @@
         width: 243px;
     }
 }
-
-/* @media screen and (min-width: 540px) {
-    #Trending-slider {
-      width: 243px;
-    }
-}
-@media screen and (min-width: 778px) {
-    #Trending-slider {
-        width: 236px;
-        height: 288px;
-    }
-} */
 
 .title-container{
     border:1px solid yellow;
